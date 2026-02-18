@@ -1,4 +1,4 @@
-# 2006 Frank Jamison — Resume / Portfolio Site
+# FrankJamison.com / 2006 Portfolio Site
 
 A simple, static resume/portfolio website built with plain **HTML + CSS**.
 
