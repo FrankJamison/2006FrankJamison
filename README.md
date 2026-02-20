@@ -1,33 +1,24 @@
-# FrankJamison.com / 2006 Portfolio Site
+# FrankJamison.com v2006
 
-A simple, static resume/portfolio website built with plain **HTML + CSS**.
+2006-era resume/portfolio site as a simple static page (plain HTML + CSS). No build step, no framework.
+
+## Live preview
+
+- https://frankjamison2006.fcjamison.com/
+
+## What’s in here
 
 - Single-page layout (About, Work Experience, Education, Contact)
 - Downloadable PDF resume
 - Responsive layout via media queries
-- No build step, no framework
+- External CDNs: Google Fonts + Font Awesome
 
-## Demo
-
-- Local preview: open `index.html` or run a tiny static server (see below)
-- Production: deploy to any static host (GitHub Pages, Netlify, Vercel, IIS/Apache static folder, S3, etc.)
-
-## Tech
+## Tech stack
 
 - HTML5
 - CSS3
 - Google Fonts
 - Font Awesome (icons)
-
-## Technical details / skills demonstrated
-
-- Semantic HTML and in-page navigation via anchor links (`#about`, `#work`, `#education`, `#contact`)
-- Responsive design using media queries (switches between stacked and two-column layout)
-- CSS fundamentals: typography, spacing containers, utility classes, and button/link styling
-- Fixed navigation bar and consistent page structure
-- Asset management with relative paths (images and a downloadable PDF resume)
-- External CDN integrations (Google Fonts, Font Awesome)
-- Static-site deployment readiness (no build tooling required)
 
 ## Project structure
 
@@ -44,6 +35,8 @@ A simple, static resume/portfolio website built with plain **HTML + CSS**.
 ```
 
 ## Run locally
+
+This is a static site — any static file server works.
 
 ### Option A: open the file directly
 
@@ -73,11 +66,13 @@ npx serve
 
 ### Option C: VS Code task
 
-If this workspace includes a VS Code task named **Open in Browser**, you can run:
+This workspace includes a VS Code task named **Open in Browser**.
 
-- `Terminal → Run Task… → Open in Browser`
+- Run it via **Terminal → Run Task… → Open in Browser** (or Command Palette: **Tasks: Run Task**).
+- It opens Chrome at `http://frankjamisoncomv2006.localhost/`.
+- This assumes you already have a local web server and host mapping configured for that hostname.
 
-In this repo, the task is set up to open `index.html` directly in Chrome.
+If you don’t use that local setup, prefer Option A or B.
 
 ## Customize content
 
@@ -137,6 +132,12 @@ After it builds, GitHub will provide a public URL.
 ### Custom domain (optional)
 
 If you use a custom domain, configure DNS with your host and (for GitHub Pages) add a `CNAME` file.
+
+## Developer notes
+
+- The page uses in-page anchor navigation (`#about`, `#work`, `#education`, `#contact`).
+- Asset paths are relative; keep `css/`, `images/`, and `documents/` alongside `index.html` when deploying.
+- External dependencies are loaded from CDNs, so local previews require an internet connection.
 
 ## License
 
